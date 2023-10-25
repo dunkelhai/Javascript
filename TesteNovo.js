@@ -1,0 +1,5 @@
+if(pedreste){
+    alert();
+} else {
+    
+}
