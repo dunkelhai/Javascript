@@ -11,3 +11,7 @@ const moedaBRL = el => `R$ ${parseFloat(el).toFixed(2).replace('.', ',')}`;
 resultadoNovo = numeros.map(soma).map(triplo).map(moedaBRL);
 
 console.log(resultadoNovo);
+
+
+
+
