@@ -13,3 +13,15 @@ const nome = produto => produto.nome;
 
 const resultado = carrinho.map(jsonParse).map(nome);
 console.log(resultado);
+
+//criado map personalizado
+Array.prototype.meuMap = function (callback){
+    const novoArray = [];
+    for (let i = 0; i < this.length; i++) {
+        novoArray.push(callback[i], i, this);
+    }
+    return novoArray;
+}
+
+const resultado2 = carrinho.meuMap(jsonParse).meuMap(nome);
+console.log(resultado);
