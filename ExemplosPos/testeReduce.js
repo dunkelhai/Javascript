@@ -18,11 +18,14 @@ console.log(lista);
 const temEstoque = (resultado, estoque) => resultado && estoque;
 console.log(carrinho.map(p => p.estoque).reduce(temEstoque));
 
-Array.prototype.meuReduce = function (callback){
-    let acumular = this[0];
+Array.prototype.meuReduce = function (callback, initValue){
+    const index = initValue ? 0 : 1;
+    let acumular = initValue || this[0];
+
     for (let i = 0; i < this.length; i++) {
         acumular = callback(acumular, this[i], i, this);
     }
+
     return acumular;
 }
 
