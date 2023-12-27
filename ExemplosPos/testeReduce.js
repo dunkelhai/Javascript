@@ -8,7 +8,6 @@ const carrinho = [
 ];
 
 const lista = carrinho.map(p => p.preco).reduce(function(inicial, atual){
-    console.log(inicial, atual);
     return inicial + atual;
 });
 
