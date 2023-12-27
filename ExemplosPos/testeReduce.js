@@ -17,3 +17,16 @@ console.log(lista);
 // 2
 const temEstoque = (resultado, estoque) => resultado && estoque;
 console.log(carrinho.map(p => p.estoque).reduce(temEstoque));
+
+Array.prototype.meuReduce = function (callback){
+    let acumular = this[0];
+    for (let i = 0; i < this.length; i++) {
+        acumular = callback(acumular, this[i], i, this);
+    }
+    return acumular;
+}
+
+const soma = (total, valor) => valor + total;
+const numeros = [1,2,3,4,5];
+
+console.log(numeros.meuReduce(soma));
