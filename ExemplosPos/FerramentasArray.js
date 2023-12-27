@@ -21,3 +21,13 @@ console.log("Função em variável:");
 const aprovadosLista = aprovado => console.log(aprovado);
 aprovados.forEach(aprovadosLista);
 console.log(" ");
+
+
+Array.prototype.testeForEach = function (callback) {
+    for (let i = 0; i < this.length; i++){
+        callback(this[i], i, this);
+    }
+}
+
+const aprovadosLista2 = aprovado => console.log(aprovado);
+aprovados.testeForEach(aprovadosLista2);
