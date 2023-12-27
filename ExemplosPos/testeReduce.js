@@ -7,8 +7,10 @@ const carrinho = [
     { nome: "Chocolate", preco: 8.22 }
 ];
 
+const taxa = 5.88;
+
 const lista = carrinho.map(p => p.preco).reduce(function(inicial, atual){
     return inicial + atual;
-});
+}, taxa);
 
 console.log(lista);
