@@ -16,4 +16,4 @@ console.log(lista);
 
 // 2
 const temEstoque = (resultado, estoque) => resultado && estoque;
-console.log(carrinho.map(p => p.estoque).reduce(temEstoque))
+console.log(carrinho.map(p => p.estoque).reduce(temEstoque));
