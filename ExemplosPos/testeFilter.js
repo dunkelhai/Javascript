@@ -7,8 +7,23 @@ const carrinho = [
     { nome: "Chocolate", preco: 8.22 }
 ];
 
-const nome = produto => produto.nome;
 const caro = produto => produto.preco >= 5.00;
-const resultado = carrinho.filter(caro);
+// const resultado = carrinho.filter(caro);
+//
+// console.log(resultado);
+
+Array.prototype.meuFilter = function (callback){
+    const novoArray = [];
+    for (let i = 0; i < this.length; i++) {
+        if (callback(this[i], i, this)){
+            novoArray.push(
+              this[i]
+            );
+        }
+    }
+    return novoArray;
+}
+
+const resultado = carrinho.meuFilter(caro);
 
 console.log(resultado);
