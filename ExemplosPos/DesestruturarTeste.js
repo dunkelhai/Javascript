@@ -6,3 +6,8 @@ function intervalo({minimo, maximo = 100}){
 console.log(
     intervalo({minimo: 2, maximo: 20})
 );
+
+var valores = {maximo: 20, minimo: 10};
+console.log(
+    intervalo(valores)
+);
