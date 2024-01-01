@@ -22,3 +22,11 @@ valores.splice(1, 1, 2, 3);
 
 let novoValor = valores.slice(3);
 console.log(novoValor);
+
+const array2 = [10, 20, 30, 40];
+const [a, b, , d] = array2;
+console.log(a, b, d);
+
+const array3 = [[10, 20, 30, 40], ['a', 'b', 'c', 'e']];
+const [ , [ , , z]] = array3;
+console.log(z);
