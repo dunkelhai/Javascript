@@ -1,8 +1,12 @@
 function convertToUpper(obj){
     try {
         return `${obj.name.toUpperCase()}.`;
-    } catch (TypeError) {
-     console.log('Erro: ', TypeError);
+    } catch (error) {
+        if (error instanceof TypeError){
+            console.log(
+               `Erro: ${error.message} na linha: ${error.lineNumber}`
+            );
+        }
     }
 }
 
