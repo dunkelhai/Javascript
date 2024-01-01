@@ -8,9 +8,9 @@ const carrinho = [
 ];
 
 const caro = produto => produto.preco >= 5.00;
-// const resultado = carrinho.filter(caro);
-//
-// console.log(resultado);
+const resultado = carrinho.filter(caro);
+
+console.log(resultado);
 
 Array.prototype.meuFilter = function (callback){
     const novoArray = [];
