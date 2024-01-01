@@ -4,5 +4,5 @@ function intervalo({minimo, maximo = 100}){
 }
 
 console.log(
-    intervalo({minimo: 2})
+    intervalo({minimo: 2, maximo: 20})
 );
