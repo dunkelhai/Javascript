@@ -10,3 +10,9 @@ const Pessoa = {
 }
 
 console.log(Pessoa);
+
+const {nome, idade} = Pessoa;
+console.log(nome, idade);
+
+const {nome: n, idade: i} = Pessoa;
+console.log(n, i);
