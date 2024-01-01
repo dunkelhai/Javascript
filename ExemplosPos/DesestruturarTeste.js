@@ -1,6 +1,8 @@
-function intervalo(maximo, minimo){
+function intervalo({minimo, maximo = 100}){
     const resultado = Math.random() * (maximo - minimo) + minimo;
-    return resultado;
+    return Math.floor(resultado);
 }
 
-console.log(intervalo(2, 80));
+console.log(
+    intervalo({minimo: 2})
+);
