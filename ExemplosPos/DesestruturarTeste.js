@@ -21,5 +21,8 @@ function intervalo2([minimo = 0, maximo = 100]){
 }
 
 console.log(
-    intervalo2([10, 20])
+    intervalo2([10, 20]),
+    intervalo2([90]),
+    intervalo2([]),
+    intervalo2([ , 10])
 )
