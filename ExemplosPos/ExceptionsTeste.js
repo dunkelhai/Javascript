@@ -4,7 +4,7 @@ function convertToUpper(obj){
     } catch (error) {
         if (error instanceof TypeError){
             console.log(
-               `Erro: ${error.message} na linha: ${error.lineNumber}`
+               `Erro: ${error.message} na linha: ${error.lineNumber} do tipo: ${error.name}`
             );
         }
     }
