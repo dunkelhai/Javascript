@@ -4,14 +4,16 @@ function convertToUpper(obj){
     } catch (error) {
         if (error instanceof TypeError){
             console.log(
-               `Erro: ${error.message} na linha: ${error.lineNumber} do tipo: ${error.name}`
+               `Erro: ${error.message} do tipo: ${error.name}`
             );
         }
+    } finally {
+        console.log(`Finalizado`);
     }
 }
 
 
-obj = {nome: 'Alysson'};
+obj = {name: 'Alysson'};
 console.log(
     convertToUpper(obj)
 );
