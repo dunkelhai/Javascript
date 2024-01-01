@@ -5,7 +5,8 @@ const Pessoa = {
         rua: 'Das Flores',
         numero: 33,
         cidade: 'Xanxerê',
-        uf: 'SC'
+        uf: 'SC',
+        cep: '88220-023'
     }
 }
 
@@ -19,5 +20,5 @@ console.log(n, i);
 
 console.log(Pessoa.endereco.rua);
 
-const {endereco: {rua: logradouro}, endereco: {numero: nr}, endereco: {cidade: cd}, endereco: {uf}} = Pessoa;
-console.log(`Meu endereço é na rua ${logradouro} de número ${nr} localizada na cidade ${cd} da UF de ${uf}.`);
+var {endereco: {rua: logradouro, numero: nr, cidade: cd, uf, cep = 'CEP em branco'}} = Pessoa;
+console.log(`Meu endereço é na rua ${logradouro} de número ${nr} localizada na cidade ${cd} da UF de ${uf}. Cujo CEP é ${cep}.`);
