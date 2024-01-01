@@ -13,6 +13,9 @@ console.log(
 );
 
 function intervalo2([minimo = 0, maximo = 100]){
+    if (minimo > maximo){
+        [minimo, maximo] = [maximo, minimo];
+    }
     const resultado = Math.random() * (maximo - minimo) + minimo;
     return Math.floor(resultado);
 }
