@@ -12,3 +12,4 @@ if (a === b){
 //Ternário
 
 console.log(a == b ? "Caiu" : "Não caiu");
+
